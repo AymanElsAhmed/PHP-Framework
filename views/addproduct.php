@@ -1,34 +1,26 @@
 <div class="container">
-    <div class="d-flex my-3">
-        <div class="me-auto p-3">Product List</div>
-        <button type="submit" class="btn btn-primary mx-1" id="submit">
-            Save
-        </button>
-        <button type="button" class="btn btn-danger mx-1" id="cancel">
-            Cancel
-        </button>
-    </div>
+
     <hr />
-    <form method="post" id="form">
+    <form method="post" id="form" action="">
         <div class="row mb-3">
             <label for="sku" class="col-sm-2 col-form-label">SKU</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="sku" />
+                <input type="number" class="form-control" id="sku" name="sku" value="" />
             </div>
         </div>
         <div class="row mb-3">
             <label for="name" class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="name" />
+                <input type="text" class="form-control" id="name"  name="name"/>
             </div>
         </div>
         <div class="row mb-3">
             <label for="price" class="col-sm-2 col-form-label">Price</label>
             <div class="col-sm-10">
-                <input type="number" class="form-control" id="price" />
+                <input type="number" class="form-control" id="price" name="price" />
             </div>
         </div>
-        <div class="row mb-3">
+        <!--<div class="row mb-3">
             <label class="col-sm-2 col-form-labe" for="productType"
             >Type Switcher</label
             >
@@ -84,6 +76,13 @@
                     <input type="number" class="form-control" id="weight" />
                 </div>
             </div>
+        </div>-->
+
+        <div class="d-flex my-3">
+            <button type="submit" class="btn btn-primary mx-1">Save</button>
+            <button type="button" class="btn btn-danger mx-1" id="cancel">
+                Cancel
+            </button>
         </div>
     </form>
     <hr />
