@@ -27,13 +27,14 @@ class SiteController extends Controller
             if($request->isPost()) {
             $productModel->loadData($request->getBody());
 
-            echo "<pre>";
-            var_dump($productModel);
-            echo "</pre>";
+
 
             if ($productModel->validate() && $productModel->add()){
             return "Added";
             }
+                echo "<pre>";
+                var_dump($productModel->errors);
+                echo "</pre>";
             return $this->render('addproduct',[
                 'model'=> $productModel
             ]);
