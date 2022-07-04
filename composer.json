@@ -1,0 +1,15 @@
+{
+    "name": "ayman/franework",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ayman Elsayed",
+            "email": "ayman.elsayed628@gmail.com"
+        }
+    ],
+    "require": {}
+}
