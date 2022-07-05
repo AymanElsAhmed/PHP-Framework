@@ -20,6 +20,13 @@ abstract class DbModel extends Model
         $statment->execute();
         return true;
     }
+    public function data()
+    {
+        $tableName = $this->tableName();
+        $statment = Application::$app->db->pdo->query("SELECT * FROM $tableName");
+        $products = $statment->fetchAll();
+        return $products;
+    }
 
     public static function prepare($sql)
     {

@@ -21,6 +21,10 @@ class ProductModel extends DbModel
     {
         return $this->save();
     }
+    public function viewData()
+    {
+        return $this->data();
+    }
 
     public function rules(): array
     {

@@ -11,10 +11,17 @@ class SiteController extends Controller
 {
     public function home()
     {
-        $param = [
-            'name' => 'Ayman'
-        ];
-        return $this->render('home', $param);
+        $product = new ProductModel();
+        $products = $product->viewData();
+        // echo "<pre>";
+        // var_dump($product->viewData());
+        // echo "</pre>";
+        // $param = [
+        //     'name' => 'Ayman'
+        // ];
+        return $this->render('home', [
+            'model' => $products
+        ]);
     }
 
     /* public function show(){
