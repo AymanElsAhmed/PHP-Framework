@@ -9,38 +9,43 @@ use app\models\ProductModel;
 
 class SiteController extends Controller
 {
-    public function home(){
+    public function home()
+    {
         $param = [
-            'name'=>'Ayman'
+            'name' => 'Ayman'
         ];
-        return $this->render('home',$param);
-
+        return $this->render('home', $param);
     }
 
-   /* public function show(){
+    /* public function show(){
         return $this->render('addproduct');
     }*/
 
-    public function addProduct(Request $request ){
+    public function addProduct(Request $request)
+    {
 
-            $productModel = new ProductModel();
-            if($request->isPost()) {
-            $productModel->loadData($request->getBody());
+        // $product = new ProductModel();
+        // return $this->render('addproduct', [
+        //     'model' => $product
+        // ]);
+        return $this->render('test');
+    }
+
+    public function store(Request $request)
+    {
+        $product = new ProductModel();
+        $product->loadData($request->getBody());
 
 
 
-            if ($productModel->validate() && $productModel->add()){
+        if ($product->validate() && $product->add()) {
             return "Added";
-            }
-                echo "<pre>";
-                var_dump($productModel->errors);
-                echo "</pre>";
-            return $this->render('addproduct',[
-                'model'=> $productModel
-            ]);
         }
-        return $this->render('addproduct',[
-            'model'=> $productModel
+        // echo "<pre>";
+        // var_dump($product->errors);
+        // echo "</pre>";
+        return $this->render('test', [
+            'model' => $product
         ]);
     }
 }

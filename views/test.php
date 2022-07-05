@@ -5,31 +5,31 @@
         <div class="row mb-3">
             <label for="sku" class="col-sm-2 col-form-label">SKU</label>
             <div class="col-sm-10">
-                <input type="number" class="form-control <?php echo $model->hasError('sku') ? ' is-invalid' : ''; ?>" id="sku" name="sku" value="<?php echo $model->sku ?>" />
+                <input type="number" class="form-control" id="sku" name="sku" value="" />
             </div>
             <!-- <div class="invalid-feedback">
                 Please provide a valid city.
             </div> -->
             <div class="text-danger text-center">
-                <?php echo $model->getError('sku'); ?>
+
             </div>
         </div>
         <div class="row mb-3">
             <label for="name" class="col-sm-2 col-form-label">Name</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control <?php echo $model->hasError('name') ? ' is-invalid' : ''; ?>" id="name" name="name" value="<?php echo $model->name ?>" />
+                <input type="text" class="form-control" id="name" name="name" value="" />
             </div>
             <div class="text-danger text-center">
-                <?php echo $model->getError('name'); ?>
+
             </div>
         </div>
         <div class="row mb-3">
             <label for="price" class="col-sm-2 col-form-label">Price</label>
             <div class="col-sm-10">
-                <input type="number" class="form-control <?php echo $model->hasError('price') ? ' is-invalid' : ''; ?>" id="price" name="price" value="<?php echo $model->price ?>" />
+                <input type="number" class="form-control " id="price" name="price" value="">
             </div>
             <div class="text-danger text-center">
-                <?php echo $model->getError('price'); ?>
+
             </div>
         </div>
         <!--<div class="row mb-3">
@@ -100,6 +100,3 @@
     <hr />
 </div>
 <!--<script src="script.js"></script>
---><?php
-    /*echo __DIR__;
-*/ ?>
